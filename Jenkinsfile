@@ -8,7 +8,7 @@
 //     }
 //     stage("Test"){
 //       steps{
-//         echo "Testing the Application..."
+//         echo "Testing the Application1..."
 //       }
 //     }
 //   }
