@@ -1,14 +1,35 @@
+// pipeline{
+//   agent any
+//   stages{
+//     stage("Build"){
+//       steps{
+//         echo "Building the Application test..."
+//       }
+//     }
+//     stage("Test"){
+//       steps{
+//         echo "Testing the Application..."
+//       }
+//     }
+//   }
+// }
 pipeline{
   agent any
   stages{
-    stage("Build"){
+    stage("Run FrontEnd"){
       steps{
-        echo "Building the Application test..."
+        echo "Executing Yarn..."
+        nodejs('NodeJs')
+            sh 'yarn install'
+        }
       }
     }
-    stage("Test"){
+    stage("Node"){
       steps{
-        echo "Testing the Application..."
+        echo "executing gradle..."
+        with Gradle(){
+            sh './gradlew -v'
+        }
       }
     }
   }
