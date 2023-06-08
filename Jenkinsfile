@@ -21,7 +21,6 @@ pipeline{
         echo "Executing Yarn..."
         nodejs('nodejs-20.2')
             sh 'yarn install'
-        }
       }
     }
     stage("Node"){
