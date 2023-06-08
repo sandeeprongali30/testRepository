@@ -16,13 +16,14 @@
 pipeline{
   agent any
   stages{
-//     stage("Run FrontEnd"){
-//       steps{
-//         echo "Executing Yarn..."
-//         nodejs('nodejs-20.2')
-//             sh 'yarn install'
-//       }
-//     }
+    stage("Run FrontEnd"){
+      steps{
+        echo "Executing Yarn..."
+        nodejs('nodejs-20.2'){
+            sh 'yarn install'
+        }
+      }
+    }
     stage("Node"){
       steps{
         echo "executing gradle..."
