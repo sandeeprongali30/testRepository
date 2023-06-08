@@ -27,7 +27,7 @@ pipeline{
     stage("Node"){
       steps{
         echo "executing gradle..."
-        with Gradle(){
+        withGradle(){
             sh './gradlew -v'
         }
       }
