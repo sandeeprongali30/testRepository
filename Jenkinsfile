@@ -19,7 +19,7 @@ pipeline{
     stage("Run FrontEnd"){
       steps{
         echo "Executing Yarn..."
-        nodejs('NodeJs')
+        nodejs('nodejs-20.2')
             sh 'yarn install'
         }
       }
