@@ -26,7 +26,7 @@ pipeline{
     }
     stage("Node"){
       steps{
-        echo "executing gradle..."
+        echo "executing Gradle..."
         withGradle(){
             sh 'Gradle -version'
         }
